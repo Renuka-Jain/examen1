@@ -1,6 +1,7 @@
 package edu.upc.dsa;
 
 import edu.upc.dsa.models.Punto;
+import edu.upc.dsa.models.PuntoUsuario;
 import edu.upc.dsa.models.Usuario;
 import org.apache.log4j.Logger;
 
@@ -99,8 +100,8 @@ public class GameManagerImpl implements GameManager{
     }
 
     @Override
-    public List<Punto> listadoPuntosUsuario(String id) {
-        List<Punto> userPuntos = this.gameUsers.get(id).listPuntoFecha();
+    public List<PuntoUsuario> listadoPuntosUsuario(String id) {
+        List<PuntoUsuario> userPuntos = this.gameUsers.get(id).listPuntoFecha();
         if(userPuntos.size()!=0)
             logger.info("User "+id+" "+userPuntos);
         else

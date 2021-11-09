@@ -91,7 +91,7 @@ public class GameService {
     @GET
     @ApiOperation(value = "Consultar los puntos de interés por los que un usuario pasa", notes = "asdasd")
     @ApiResponses(value = {
-            @ApiResponse(code = 201, message = "Successful", response = Punto.class, responseContainer="List"),
+            @ApiResponse(code = 201, message = "Successful", response = PuntoUsuario.class, responseContainer="List"),
             @ApiResponse(code = 404, message= "Lista de objetos no encontrada (está vacía)")
     })
 
@@ -100,8 +100,8 @@ public class GameService {
     @Produces(MediaType.APPLICATION_JSON)
     public Response listadoObjetosUsuario(@PathParam("id") String id){
 
-        List<Punto> objetoList = this.manager.listadoPuntosUsuario(id);
-        GenericEntity<List<Punto>> entity = new GenericEntity<List<Punto>>(objetoList) {};
+        List<PuntoUsuario> objetoList = this.manager.listadoPuntosUsuario(id);
+        GenericEntity<List<PuntoUsuario>> entity = new GenericEntity<List<PuntoUsuario>>(objetoList) {};
 
         if(objetoList.size() > 0)
             return Response.status(201).entity(entity).build();

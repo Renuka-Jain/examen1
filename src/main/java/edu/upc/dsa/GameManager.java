@@ -2,6 +2,7 @@ package edu.upc.dsa;
 
 
 import edu.upc.dsa.models.Punto;
+import edu.upc.dsa.models.PuntoUsuario;
 import edu.upc.dsa.models.Usuario;
 
 import java.util.List;
@@ -13,7 +14,7 @@ public interface GameManager {
     public int numUsuario();
     public Usuario consultarInfoUsuario(String id);
     public Integer addPuntoUsuario(String id,String punto,String fecha);
-    public List<Punto> listadoPuntosUsuario(String id);//Lista de puntos usuario
+    public List<PuntoUsuario> listadoPuntosUsuario(String id);//Lista de puntos usuario
     public List<Usuario>listadoUsuariosPasan(String punto);
     public List<Usuario>listarUsuariosPuntos();//Lista usuarios por puntos
     public int numObjetosUsuario(String nombreUsuario);

@@ -62,8 +62,8 @@ public class GameManagerTest {
         GameManagerImpl.getInstance().addPuntoUsuario((GameManagerImpl.getInstance().getUsuarioID("Julia")),"Casilla","2021-06-28 10:15");
         GameManagerImpl.getInstance().addPuntoUsuario((GameManagerImpl.getInstance().getUsuarioID("Julia")),"Puerta","2021-06-25 11:14");
 
-        Assert.assertEquals("Puerta",GameManagerImpl.getInstance().listadoPuntosUsuario((GameManagerImpl.getInstance().getUsuarioID("Julia"))).get(0).getNombre());
-        Assert.assertEquals( "Casilla" ,GameManagerImpl.getInstance().listadoPuntosUsuario((GameManagerImpl.getInstance().getUsuarioID("Julia"))).get(1).getNombre());
+        Assert.assertEquals("Puerta",GameManagerImpl.getInstance().listadoPuntosUsuario((GameManagerImpl.getInstance().getUsuarioID("Julia"))).get(0).getPunto().getNombre());
+        Assert.assertEquals( "Casilla" ,GameManagerImpl.getInstance().listadoPuntosUsuario((GameManagerImpl.getInstance().getUsuarioID("Julia"))).get(1).getPunto().getNombre());
     }
 
     @Test

@@ -29,13 +29,10 @@ public class Usuario {
         listaPuntos.add(new PuntoUsuario(punto,fecha));
     }
 
-    public List<Punto> listPuntoFecha(){
+    public List<PuntoUsuario> listPuntoFecha(){
         Collections.sort(listaPuntos);
-        List<Punto> listaOrdenada = new LinkedList<Punto>();
-        for (PuntoUsuario obj: this.listaPuntos) {
-            listaOrdenada.add(obj.getPunto());
-        }
-        return listaOrdenada;
+
+        return listaPuntos;
     }
 
     public boolean pasaPunto(String punto){
